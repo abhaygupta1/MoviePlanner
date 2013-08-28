@@ -8,6 +8,7 @@
 
 #import "MovieListingTableViewController.h"
 #import "TMSClient.h"
+#import "SherpaClient.h"
 #import "Movie.h"
 #import "MovieCell.h"
 
@@ -59,7 +60,7 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return self.movies.count;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -126,6 +127,7 @@
  */
 
 - (void)reload {
+    /*
     [[TMSClient instance] movieListWithZipCode:@"95054" success:^(AFHTTPRequestOperation *operation, id response) {
         id payload = [NSJSONSerialization JSONObjectWithData:response options:NSJSONWritingPrettyPrinted error:nil];
         NSLog(@"The response is %@", payload);
@@ -135,6 +137,15 @@
         // Do nothing
         NSLog(@"The response is %@", error);
     }];
+     
+    [[SherpaClient instance] userListWithCount:5 success:^(AFHTTPRequestOperation *operation, id response) {
+        id payload = [NSJSONSerialization JSONObjectWithData:response options:NSJSONWritingPrettyPrinted error:nil];
+        NSLog(@"The response is %@", payload);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        // Do nothing
+        NSLog(@"The response is %@", error);
+    }];
+     */
 }
 
 @end

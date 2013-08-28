@@ -13,32 +13,51 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movie Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtb-MC-Tpr">
-                        <rect key="frame" x="155" y="11" width="200" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Movie Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtb-MC-Tpr">
+                        <rect key="frame" x="137" y="11" width="160" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9yM-Sw-Jpq">
-                        <rect key="frame" x="11" y="11" width="100" height="100"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9yM-Sw-Jpq">
+                        <rect key="frame" x="39" y="41" width="60" height="60"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirmed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwF-li-kKR">
-                        <rect key="frame" x="155" y="55" width="80" height="12"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Showtime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwF-li-kKR">
+                        <rect key="frame" x="137" y="40" width="160" height="12"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Interested: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aty-Ya-7g7">
-                        <rect key="frame" x="155" y="82" width="80" height="12"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Confirmed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwq-uB-66w">
+                        <rect key="frame" x="165" y="72" width="80" height="12"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Interested: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aty-Ya-7g7">
+                        <rect key="frame" x="165" y="92" width="80" height="12"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Gwq-uB-66w" firstAttribute="leading" secondItem="Aty-Ya-7g7" secondAttribute="leading" id="BTV-Qp-pxH"/>
+                    <constraint firstItem="Aty-Ya-7g7" firstAttribute="top" secondItem="Gwq-uB-66w" secondAttribute="bottom" constant="4" id="FPT-Qk-YNI"/>
+                    <constraint firstItem="9yM-Sw-Jpq" firstAttribute="top" secondItem="xkV-tG-jLn" secondAttribute="top" constant="10" id="GhT-Zf-jwv"/>
+                    <constraint firstItem="Gwq-uB-66w" firstAttribute="leading" secondItem="9yM-Sw-Jpq" secondAttribute="trailing" constant="66" id="J6o-Ge-x79"/>
+                    <constraint firstItem="Gwq-uB-66w" firstAttribute="top" secondItem="qwF-li-kKR" secondAttribute="bottom" constant="4" id="RC8-v8-JFR"/>
+                    <constraint firstItem="qwF-li-kKR" firstAttribute="leading" secondItem="Rtb-MC-Tpr" secondAttribute="leading" id="ROU-HM-oYp"/>
+                    <constraint firstItem="9yM-Sw-Jpq" firstAttribute="leading" secondItem="xkV-tG-jLn" secondAttribute="leading" constant="5" id="hBp-Hy-gWZ"/>
+                    <constraint firstItem="Rtb-MC-Tpr" firstAttribute="top" secondItem="xkV-tG-jLn" secondAttribute="top" constant="5" id="iYn-kl-WsT"/>
+                    <constraint firstItem="qwF-li-kKR" firstAttribute="leading" secondItem="9yM-Sw-Jpq" secondAttribute="trailing" constant="5" id="kvC-Ay-UeU"/>
+                    <constraint firstItem="qwF-li-kKR" firstAttribute="top" secondItem="Rtb-MC-Tpr" secondAttribute="bottom" constant="4" id="yzX-YG-2dV"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="confirmed" destination="qwF-li-kKR" id="YI7-wJ-alt"/>

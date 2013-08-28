@@ -27,6 +27,11 @@
 		B1BBECFD17C680C70087DE68 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BBECFC17C680C70087DE68 /* Movie.m */; };
 		B1BBED0117C6D1520087DE68 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BBED0017C6D1520087DE68 /* MovieCell.m */; };
 		B1BBED0217C6D4530087DE68 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1BBECFE17C6D1020087DE68 /* MovieCell.xib */; };
+		B1BBED0617C93E150087DE68 /* MyMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BBED0417C93E150087DE68 /* MyMoviesViewController.m */; };
+		B1BBED0717C93E150087DE68 /* MyMoviesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1BBED0517C93E150087DE68 /* MyMoviesViewController.xib */; };
+		B1BBED0917C949C80087DE68 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = B1BBED0817C949C00087DE68 /* Background.png */; };
+		B1BBED0C17C95D6E0087DE68 /* SherpaClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BBED0B17C95D6E0087DE68 /* SherpaClient.m */; };
+		B1BBED0F17C9C9D60087DE68 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BBED0E17C9C9D60087DE68 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,14 @@
 		B1BBECFE17C6D1020087DE68 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		B1BBECFF17C6D1520087DE68 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		B1BBED0017C6D1520087DE68 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		B1BBED0317C93E150087DE68 /* MyMoviesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMoviesViewController.h; sourceTree = "<group>"; };
+		B1BBED0417C93E150087DE68 /* MyMoviesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMoviesViewController.m; sourceTree = "<group>"; };
+		B1BBED0517C93E150087DE68 /* MyMoviesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyMoviesViewController.xib; sourceTree = "<group>"; };
+		B1BBED0817C949C00087DE68 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		B1BBED0A17C95D6E0087DE68 /* SherpaClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SherpaClient.h; sourceTree = "<group>"; };
+		B1BBED0B17C95D6E0087DE68 /* SherpaClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SherpaClient.m; sourceTree = "<group>"; };
+		B1BBED0D17C9C9D60087DE68 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		B1BBED0E17C9C9D60087DE68 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		BA649CB9FA1B4F97B522ED86 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,6 +114,7 @@
 		B13A176017C44F22009549C1 = {
 			isa = PBXGroup;
 			children = (
+				B1BBED0817C949C00087DE68 /* Background.png */,
 				B13A177217C44F22009549C1 /* MoviePlanner */,
 				B13A178B17C44F22009549C1 /* MoviePlannerTests */,
 				B13A176B17C44F22009549C1 /* Frameworks */,
@@ -142,14 +156,21 @@
 				B13A177317C44F22009549C1 /* Supporting Files */,
 				B1BBECDB17C47D290087DE68 /* TMSClient.h */,
 				B1BBECDC17C47D290087DE68 /* TMSClient.m */,
+				B1BBED0A17C95D6E0087DE68 /* SherpaClient.h */,
+				B1BBED0B17C95D6E0087DE68 /* SherpaClient.m */,
 				B1BBECF117C660530087DE68 /* NSDictionary+CPAdditions.h */,
 				B1BBECF217C660530087DE68 /* NSDictionary+CPAdditions.m */,
 				B1BBECE517C4FD150087DE68 /* MovieListingTableViewController.h */,
 				B1BBECE617C4FD150087DE68 /* MovieListingTableViewController.m */,
+				B1BBED0317C93E150087DE68 /* MyMoviesViewController.h */,
+				B1BBED0417C93E150087DE68 /* MyMoviesViewController.m */,
+				B1BBED0517C93E150087DE68 /* MyMoviesViewController.xib */,
 				B1BBECEB17C65BE60087DE68 /* RestObject.h */,
 				B1BBECEC17C65BE60087DE68 /* RestObject.m */,
 				B1BBECFB17C680C70087DE68 /* Movie.h */,
 				B1BBECFC17C680C70087DE68 /* Movie.m */,
+				B1BBED0D17C9C9D60087DE68 /* User.h */,
+				B1BBED0E17C9C9D60087DE68 /* User.m */,
 			);
 			path = MoviePlanner;
 			sourceTree = "<group>";
@@ -263,7 +284,9 @@
 			files = (
 				B1BBED0217C6D4530087DE68 /* MovieCell.xib in Resources */,
 				B13A177717C44F22009549C1 /* InfoPlist.strings in Resources */,
+				B1BBED0917C949C80087DE68 /* Background.png in Resources */,
 				B13A177F17C44F22009549C1 /* Images.xcassets in Resources */,
+				B1BBED0717C93E150087DE68 /* MyMoviesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,8 +341,11 @@
 				B1BBECF417C665D20087DE68 /* RestObject.m in Sources */,
 				B1BBECF317C6606D0087DE68 /* NSDictionary+CPAdditions.m in Sources */,
 				B1BBECFD17C680C70087DE68 /* Movie.m in Sources */,
+				B1BBED0C17C95D6E0087DE68 /* SherpaClient.m in Sources */,
 				B1BBECDD17C47D290087DE68 /* TMSClient.m in Sources */,
 				B13A177D17C44F22009549C1 /* movieplannerAppDelegate.m in Sources */,
+				B1BBED0F17C9C9D60087DE68 /* User.m in Sources */,
+				B1BBED0617C93E150087DE68 /* MyMoviesViewController.m in Sources */,
 				B13A177917C44F22009549C1 /* main.m in Sources */,
 				B1BBED0117C6D1520087DE68 /* MovieCell.m in Sources */,
 				B1BBECE717C4FD150087DE68 /* MovieListingTableViewController.m in Sources */,

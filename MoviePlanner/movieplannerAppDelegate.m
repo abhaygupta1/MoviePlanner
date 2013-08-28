@@ -8,7 +8,9 @@
 
 #import "movieplannerAppDelegate.h"
 #import "MovieListingTableViewController.h"
+#import "MyMoviesViewController.h"
 #import "TMSClient.h"
+#import "User.h"
 
 @implementation movieplannerAppDelegate
 
@@ -17,7 +19,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     MovieListingTableViewController *tableViewController = [[MovieListingTableViewController alloc] init];
-    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:tableViewController];
+    MyMoviesViewController *myMoviesViewController = [[MyMoviesViewController alloc] init];
+
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:myMoviesViewController];
     self.window.rootViewController = nvc;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
