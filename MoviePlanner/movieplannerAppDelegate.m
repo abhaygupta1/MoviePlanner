@@ -7,7 +7,7 @@
 //
 
 #import "movieplannerAppDelegate.h"
-#import "MovieListingTableViewController.h"
+#import "MoviesTonightViewController.h"
 #import "MyMoviesViewController.h"
 #import "TMSClient.h"
 #import "User.h"
@@ -18,7 +18,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    MovieListingTableViewController *tableViewController = [[MovieListingTableViewController alloc] init];
+    
     MyMoviesViewController *myMoviesViewController = [[MyMoviesViewController alloc] init];
 
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:myMoviesViewController];

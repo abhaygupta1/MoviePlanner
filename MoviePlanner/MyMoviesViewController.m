@@ -12,6 +12,7 @@
 #import "Movie.h"
 #import "User.h"
 #import "SherpaClient.h"
+#import "MoviesTonightViewController.h"
 
 @interface MyMoviesViewController ()
 
@@ -49,7 +50,7 @@
     
     self.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc]
                                              initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self
-                                             action:@selector(onComposeButton)];
+                                             action:@selector(onAddButton)];
     
     [self.tableView setEditing:YES animated:YES];
 
@@ -63,6 +64,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)onAddButton {
+    
+    MoviesTonightViewController *moviesTonightViewController = [[MoviesTonightViewController alloc] init];
+    UINavigationController *moviesTonightNVC = [[UINavigationController alloc]
+                                                initWithRootViewController:moviesTonightViewController];
+    [self.navigationController presentViewController:moviesTonightNVC animated:YES completion:nil];
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -75,7 +83,7 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    NSLog(@"CAlling get row count for %d", section);
+    NSLog(@"Calling get row count for %d", section);
     switch (section) {
         case 0: {
             return self.confirmedMovies.count;

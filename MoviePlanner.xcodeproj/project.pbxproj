@@ -20,6 +20,10 @@
 		B13A178817C44F22009549C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B13A177017C44F22009549C1 /* UIKit.framework */; };
 		B13A179017C44F22009549C1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B13A178E17C44F22009549C1 /* InfoPlist.strings */; };
 		B13A179217C44F22009549C1 /* MoviePlannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B13A179117C44F22009549C1 /* MoviePlannerTests.m */; };
+		B16F6F8617CF0D9900374DBB /* MoviesTonightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F6F8417CF0D9900374DBB /* MoviesTonightViewController.m */; };
+		B16F6F8717CF0D9900374DBB /* MoviesTonightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B16F6F8517CF0D9900374DBB /* MoviesTonightViewController.xib */; };
+		B16F6F8B17CF7E4500374DBB /* MovieSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F6F8917CF7E4500374DBB /* MovieSelectorViewController.m */; };
+		B16F6F8C17CF7E4500374DBB /* MovieSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B16F6F8A17CF7E4500374DBB /* MovieSelectorViewController.xib */; };
 		B1BBECDD17C47D290087DE68 /* TMSClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BBECDC17C47D290087DE68 /* TMSClient.m */; };
 		B1BBECE717C4FD150087DE68 /* MovieListingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BBECE617C4FD150087DE68 /* MovieListingTableViewController.m */; };
 		B1BBECF317C6606D0087DE68 /* NSDictionary+CPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BBECF217C660530087DE68 /* NSDictionary+CPAdditions.m */; };
@@ -62,6 +66,12 @@
 		B13A178D17C44F22009549C1 /* MoviePlannerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MoviePlannerTests-Info.plist"; sourceTree = "<group>"; };
 		B13A178F17C44F22009549C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B13A179117C44F22009549C1 /* MoviePlannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviePlannerTests.m; sourceTree = "<group>"; };
+		B16F6F8317CF0D9900374DBB /* MoviesTonightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesTonightViewController.h; sourceTree = "<group>"; };
+		B16F6F8417CF0D9900374DBB /* MoviesTonightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesTonightViewController.m; sourceTree = "<group>"; };
+		B16F6F8517CF0D9900374DBB /* MoviesTonightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviesTonightViewController.xib; sourceTree = "<group>"; };
+		B16F6F8817CF7E4500374DBB /* MovieSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieSelectorViewController.h; sourceTree = "<group>"; };
+		B16F6F8917CF7E4500374DBB /* MovieSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSelectorViewController.m; sourceTree = "<group>"; };
+		B16F6F8A17CF7E4500374DBB /* MovieSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieSelectorViewController.xib; sourceTree = "<group>"; };
 		B1BBECDB17C47D290087DE68 /* TMSClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSClient.h; sourceTree = "<group>"; };
 		B1BBECDC17C47D290087DE68 /* TMSClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSClient.m; sourceTree = "<group>"; };
 		B1BBECE517C4FD150087DE68 /* MovieListingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieListingTableViewController.h; sourceTree = "<group>"; };
@@ -171,6 +181,12 @@
 				B1BBECFC17C680C70087DE68 /* Movie.m */,
 				B1BBED0D17C9C9D60087DE68 /* User.h */,
 				B1BBED0E17C9C9D60087DE68 /* User.m */,
+				B16F6F8317CF0D9900374DBB /* MoviesTonightViewController.h */,
+				B16F6F8417CF0D9900374DBB /* MoviesTonightViewController.m */,
+				B16F6F8817CF7E4500374DBB /* MovieSelectorViewController.h */,
+				B16F6F8917CF7E4500374DBB /* MovieSelectorViewController.m */,
+				B16F6F8A17CF7E4500374DBB /* MovieSelectorViewController.xib */,
+				B16F6F8517CF0D9900374DBB /* MoviesTonightViewController.xib */,
 			);
 			path = MoviePlanner;
 			sourceTree = "<group>";
@@ -283,10 +299,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1BBED0217C6D4530087DE68 /* MovieCell.xib in Resources */,
+				B16F6F8C17CF7E4500374DBB /* MovieSelectorViewController.xib in Resources */,
 				B13A177717C44F22009549C1 /* InfoPlist.strings in Resources */,
 				B1BBED0917C949C80087DE68 /* Background.png in Resources */,
 				B13A177F17C44F22009549C1 /* Images.xcassets in Resources */,
 				B1BBED0717C93E150087DE68 /* MyMoviesViewController.xib in Resources */,
+				B16F6F8717CF0D9900374DBB /* MoviesTonightViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,9 +359,11 @@
 				B1BBECF417C665D20087DE68 /* RestObject.m in Sources */,
 				B1BBECF317C6606D0087DE68 /* NSDictionary+CPAdditions.m in Sources */,
 				B1BBECFD17C680C70087DE68 /* Movie.m in Sources */,
+				B16F6F8617CF0D9900374DBB /* MoviesTonightViewController.m in Sources */,
 				B1BBED0C17C95D6E0087DE68 /* SherpaClient.m in Sources */,
 				B1BBECDD17C47D290087DE68 /* TMSClient.m in Sources */,
 				B13A177D17C44F22009549C1 /* movieplannerAppDelegate.m in Sources */,
+				B16F6F8B17CF7E4500374DBB /* MovieSelectorViewController.m in Sources */,
 				B1BBED0F17C9C9D60087DE68 /* User.m in Sources */,
 				B1BBED0617C93E150087DE68 /* MyMoviesViewController.m in Sources */,
 				B13A177917C44F22009549C1 /* main.m in Sources */,

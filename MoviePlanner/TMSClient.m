@@ -48,7 +48,7 @@ static NSString * const kAccessTokenKey = @"kAccessTokenKey";
     [params setObject:zipCode forKey:@"zip"];
     [params setObject:@"3" forKey:@"radius"];
     [params setObject:@"mi" forKey:@"units"];
-    [params setObject:@"2013-08-23" forKey:@"startDate"];
+    [params setObject:@"2013-08-30" forKey:@"startDate"];
 
     [self getPath:@"v1/movies/showings" parameters:params success:success failure:failure];
     

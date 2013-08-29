@@ -40,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MoviePlanner/MyMoviesViewController.m"
-            timestampString = "399358835.924605"
+            timestampString = "399447198.064042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "-reload"
             landmarkType = "5">
          </BreakpointContent>
