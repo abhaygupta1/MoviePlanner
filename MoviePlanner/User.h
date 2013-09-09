@@ -7,22 +7,32 @@
 //
 
 #import "RestObject.h"
+#import "Movie.h"
+
 
 @interface User : RestObject
 
-+ (NSMutableArray *)users;
 - (NSString *)name;
-- (NSArray *)confirmed;
-+ (NSMutableArray *)moviesWithArray:(NSArray *)array;
-- (NSArray *)interested;
+- (NSMutableArray *)movies;
+- (void)addWithInterest: (Movie *)Movie;
 
-+ (NSMutableArray *)usersWithArray:(NSArray *)array;
-+ (void)loadUsers;
-
+// current user functions
 + (void)setCurrentUser:(User *)user;
-+ (User *) getCurrentUser;
-+(void)loadCurrentUser: (NSString *)name;
-+(void)saveCurrentUser;
-//+ (NSString *)uriPath;
++ (User *)getCurrentUser;
++ (void)addMovieToCurrentUserWithTitle:(NSString *)title tmsId:(NSString *)movieId
+                               theatre:(NSString *)theatre dateTime:(NSString *)dateTime;
++ (void)saveCurrentUser;
+
+// all users functions
++ (User *)emptyUser;
++ (void)setUsers: (NSArray *)users;
++ (int)confirmCountForMovie:(NSString *)tile;
++ (int)interestCountForMovie:(NSString *)tile;
++ (NSString *)userListForMovieShowtime:(NSString *)title theatre:(NSString *)theatre time:(NSString *)time;
++ (NSString *)userFullListForMovieShowtime:(NSString *)title theatre:(NSString *)theatre time:(NSString *)time;
++ (void)usersWithArray:(NSArray *)array;
++ (NSMutableArray *)moviesWithArray:(NSArray *)array;
++ (void)reloadfromTableView:(UITableView *)tableView;
+
 
 @end

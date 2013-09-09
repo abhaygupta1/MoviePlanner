@@ -13,9 +13,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *title;
 @property (nonatomic, weak) IBOutlet UILabel *confirmed;
 @property (nonatomic, weak) IBOutlet UILabel *interested;
-
-
 @property (nonatomic, weak) IBOutlet UIImageView *movieImage;
-
 
 @end

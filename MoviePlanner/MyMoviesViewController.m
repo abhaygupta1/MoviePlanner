@@ -9,6 +9,7 @@
 #import "AFNetworking.h"
 #import "MyMoviesViewController.h"
 #import "MovieCell.h"
+#import "MovieShowtimeImageCell.h"
 #import "Movie.h"
 #import "User.h"
 #import "SherpaClient.h"
@@ -21,6 +22,7 @@
 @property (nonatomic, strong) NSMutableArray *interestedMovies;
 
 @end
+UINavigationController *moviesTonightNVC;
 
 @implementation MyMoviesViewController
 
@@ -29,7 +31,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-           [self reload];
     }
  
 
@@ -43,8 +44,8 @@
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
     
-    UINib *customNib = [UINib nibWithNibName:@"MovieCell" bundle:nil];
-    [self.tableView registerNib:customNib forCellReuseIdentifier:@"MovieCell"];
+    UINib *customNib = [UINib nibWithNibName:@"MovieShowtimeImageCell" bundle:nil];
+    [self.tableView registerNib:customNib forCellReuseIdentifier:@"MovieShowtimeImageCell"];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sign Out" style:UIBarButtonItemStylePlain target:self action:@selector(onSignOutButton)];
     
@@ -53,9 +54,23 @@
                                              action:@selector(onAddButton)];
     
     [self.tableView setEditing:YES animated:YES];
-
+    [self.tableView reloadData];
    
+    MoviesTonightViewController *moviesTonightViewController = [[MoviesTonightViewController alloc] init];
+    moviesTonightNVC = [[UINavigationController alloc]
+                                                initWithRootViewController:moviesTonightViewController];
+    
+    UITableViewController *tableViewController = [[UITableViewController alloc] init];
+    tableViewController.tableView = self.tableView;
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
+                                        init];
+    refreshControl.tintColor = [UIColor magentaColor];
+    [refreshControl addTarget:self action:@selector(updateUsers) forControlEvents:UIControlEventValueChanged];
 
+    tableViewController.refreshControl = refreshControl;
+    self.refreshControl = refreshControl;
+    [User reloadfromTableView:self.tableView];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,14 +79,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)onSignOutButton {
+    
+    // Do Nothing
+}
+
 - (void)onAddButton {
     
-    MoviesTonightViewController *moviesTonightViewController = [[MoviesTonightViewController alloc] init];
-    UINavigationController *moviesTonightNVC = [[UINavigationController alloc]
-                                                initWithRootViewController:moviesTonightViewController];
+    //MoviesTonightViewController *moviesTonightViewController = [[MoviesTonightViewController alloc] init];
+    //UINavigationController *moviesTonightNVC = [[UINavigationController alloc]
+    //                                            initWithRootViewController:moviesTonightViewController];
     [self.navigationController presentViewController:moviesTonightNVC animated:YES completion:nil];
 }
+
 #pragma mark - Table view data source
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -81,48 +108,91 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    NSLog(@"Calling get row count for %d", section);
     switch (section) {
-        case 0: {
-            return self.confirmedMovies.count;
+        case 0: { // Confirmed Section
+            if ([(Movie *)([User getCurrentUser].movies[0]) isEmpty])
+                 return 0;
+            else
+                 return 1;
             break;
         }
-        case 1: {
-            return self.interestedMovies.count;
+        case 1: { // Interested Section
+            return [User getCurrentUser].movies.count - 1;
         }
         default: return 0;
     }
 }
 
+
+// Return Cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"MovieCell";
-    MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    NSLog(@"Called set table cell %d", indexPath.section);
-
+    static NSString *CellIdentifier = @"MovieShowtimeImageCell";
+    MovieShowtimeImageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    //cell.title.text = ((Movie *)(self.movies[indexPath.row])).title;
-    //[cell.imageView setImageWithURL:[NSURL URLWithString:((Movie *)(self.movies[indexPath.row])).image]];
+    Movie *movie;
     switch (indexPath.section) {
-        case 0: {
-            cell.title.text = ((Movie *)(self.confirmedMovies[indexPath.row])).title;
+        case 0: { // Confirmed Section
+            movie = ((Movie *)([User getCurrentUser].movies[0]));
             break;
         }
-        case 1: {
-            cell.title.text = ((Movie *)(self.interestedMovies[indexPath.row])).title;
+        case 1: { // Interested Section
+            movie = ((Movie *)([User getCurrentUser].movies[indexPath.row + 1]));
             break;
         }
-        default: cell.title.text = nil;
+        default: movie = nil;
+    }
+    
+    // set labels
+    cell.title.text = [movie title];
+    cell.showtime.text = [movie stringWithShowtime];
+    cell.userList.text =
+        [User userFullListForMovieShowtime:movie.title theatre:[movie theatre] time:[movie dateTime]];
+    
+    // Tap Recongnizer
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc]
+                     initWithTarget:cell action:@selector(displayGestureForTapRecognizer:)];
+    tapRecognizer.numberOfTapsRequired = 1;
+    [cell.userList addGestureRecognizer:tapRecognizer];
+    
+    // set image
+    //[cell.imageView setImageWithURL:[NSURL URLWithString:@"file:///Users/abhayg/Desktop/142799H1.jpg"]];
+    UIImage *movieImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", movie.movieId]];
+    if (movieImage != nil) {
+        cell.imageView.image = movieImage;
     }
 
-    [cell.movieImage setImageWithURL:[NSURL URLWithString:@"file:///Users/abhayg/Desktop/142799H1.jpg"]];
+    
+    // make it reorderable
     [cell setShowsReorderControl:YES];
+    
     return cell;
 }
 
+// Return Cell Height
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Movie *movie;
+    switch (indexPath.section) {
+        case 0: {
+            movie = ((Movie *)([User getCurrentUser].movies[0]));
+            break;
+        }
+        case 1: {
+            movie = ((Movie *)([User getCurrentUser].movies[indexPath.row + 1]));
+            break;
+        }
+        default: movie = nil;
+    }
+    NSString *userList = [User userFullListForMovieShowtime:movie.title theatre:[movie theatre] time:[movie dateTime]];
+    CGSize size = [userList sizeWithFont:[UIFont fontWithName:@"Helvetica" size:10] constrainedToSize:CGSizeMake(160, 999) lineBreakMode:NSLineBreakByWordWrapping];
+    NSLog(@"%f",size.height);
+    return size.height + 75;
+}
+
+// Return Cell for the Section Heading
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
     NSString *sectionTitle;
@@ -153,20 +223,44 @@
     
     return view;
 }
+
+// Return Height for the Section Heading
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 24;
 }
 
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
 
-}
 
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
-
+    NSMutableArray *movies = [User getCurrentUser].movies;
+    // there are three scenarios
+    if (fromIndexPath.section == 0) {
+        // scenario 1 => moving from confirmed to interested
+        Movie *movie = movies[0];
+        [movies removeObjectAtIndex:0];
+        [movies insertObject:movie atIndex:toIndexPath.row];
+        [movies insertObject: [Movie emptyMovie] atIndex:0];
+    }
+    else if (toIndexPath.section == 0) {
+        // scenario 2 => moving from interested to confirmed
+        Movie *movie = movies[fromIndexPath.row + 1];
+        [movies removeObjectAtIndex:(fromIndexPath.row + 1)];
+        if ([(Movie *)(movies[0]) isEmpty]) {
+            [movies removeObjectAtIndex:0];
+        }
+        [movies insertObject:movie atIndex:0];
+    }
+    else {
+        // scenario 3 => moving within interested
+        Movie *movie = movies[fromIndexPath.row + 1];
+        [movies removeObjectAtIndex:(fromIndexPath.row + 1)];
+        [movies insertObject:movie atIndex:(toIndexPath.row + 1)];
+    }
+    [self.tableView reloadData];
+    [User saveCurrentUser];
 }
 
 // Override to support conditional rearranging of the table view.
@@ -176,35 +270,50 @@
     return YES;
 }
 
-- (void)reload {
-    
-    [[SherpaClient instance] userWithName:@"sameer1" success:^(AFHTTPRequestOperation *operation, id response) {
-        id payload = [NSJSONSerialization JSONObjectWithData:response options:NSJSONWritingPrettyPrinted error:nil];
-        NSLog(@"The response is %@", payload);
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSMutableArray *movies = [User getCurrentUser].movies;
+        // Delete the row from the data source
+        if (indexPath.section == 0) {
+            // replace with empty
+            [movies removeObjectAtIndex:indexPath.row];
+            [movies insertObject: [Movie emptyMovie] atIndex:0];
+        }
+        else {
+            // remove the element
+            [movies removeObjectAtIndex:indexPath.row];
+        }
         
-        NSDictionary *params = [payload valueForKey:@"ydht"];
-        NSLog(@"The params are %@", params);
-        NSLog(@"The user fields are %@", [params valueForKey:@"fields"]);
-
-        
-        User *user = [[User alloc] initWithDictionary:[params valueForKey:@"fields"]];
-        
-        NSLog(@"The confirmed is %@", [user confirmed]);
-        
-        self.confirmedMovies = [User moviesWithArray:[user confirmed]];
-        self.interestedMovies = [User moviesWithArray:[user interested]];
-        NSLog(@"Calling reload again");
-        [self.tableView reloadData];
-        User.currentUser = user;
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         [User saveCurrentUser];
         
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        // Do nothing
-        NSLog(@"The response is %@", error);
-    }];
-    
+    }
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        
+    }
+}
 
-    
+#pragma mark - Button Handler
+
+- (IBAction)operationPressed:(UIButton *)sender {
+    NSLog(@"Purge button pressed");
+    NSMutableArray *movies = [User getCurrentUser].movies;
+    while (movies.count > 1) {
+        [movies removeObjectAtIndex:1];
+    }
+    [User saveCurrentUser];
+    [self.tableView reloadData];
+}
+
+
+- (void)updateUsers
+{
+    [User reloadfromTableView:self.tableView];
+    NSLog(@"Reload called");
+    [self.refreshControl endRefreshing];
 }
 
 @end

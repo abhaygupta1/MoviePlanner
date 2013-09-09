@@ -24,8 +24,37 @@
 		B16F6F8717CF0D9900374DBB /* MoviesTonightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B16F6F8517CF0D9900374DBB /* MoviesTonightViewController.xib */; };
 		B16F6F8B17CF7E4500374DBB /* MovieSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F6F8917CF7E4500374DBB /* MovieSelectorViewController.m */; };
 		B16F6F8C17CF7E4500374DBB /* MovieSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B16F6F8A17CF7E4500374DBB /* MovieSelectorViewController.xib */; };
+		B16F6F9017D531BE00374DBB /* FriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F6F8F17D531BE00374DBB /* FriendTableViewCell.m */; };
+		B16F6F9217D539C600374DBB /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B16F6F9117D531E500374DBB /* FriendTableViewCell.xib */; };
+		B16F6F9C17D828AA00374DBB /* checkBoxMarked.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F6F9817D8288600374DBB /* checkBoxMarked.png */; };
+		B16F6F9D17D828AA00374DBB /* checkBoxMarked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F6F9917D8288600374DBB /* checkBoxMarked@2x.png */; };
+		B16F6F9E17D828AA00374DBB /* checkBox.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F6F9A17D8288600374DBB /* checkBox.png */; };
+		B16F6F9F17D828AA00374DBB /* checkBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F6F9B17D8288600374DBB /* checkBox@2x.png */; };
+		B16F6FA317D8329100374DBB /* MovieShowtimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F6FA217D8329100374DBB /* MovieShowtimeCell.m */; };
+		B16F6FA717DB72D500374DBB /* MovieShowtimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FA617DB6DF200374DBB /* MovieShowtimeCell.xib */; };
+		B16F6FAA17DB7EE700374DBB /* MovieShowtimeImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F6FA917DB7EE700374DBB /* MovieShowtimeImageCell.m */; };
+		B16F6FAC17DB80C600374DBB /* MovieShowtimeImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FAB17DB7F0200374DBB /* MovieShowtimeImageCell.xib */; };
+		B16F6FBC17DBCC9100374DBB /* MV003726120000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FAD17DBCC7900374DBB /* MV003726120000.jpg */; };
+		B16F6FBD17DBCC9100374DBB /* MV004597220000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FAE17DBCC7900374DBB /* MV004597220000.jpg */; };
+		B16F6FBE17DBCC9100374DBB /* MV004730710000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FAF17DBCC7900374DBB /* MV004730710000.jpg */; };
+		B16F6FBF17DBCC9100374DBB /* MV004966480000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FB017DBCC7900374DBB /* MV004966480000.jpg */; };
+		B16F6FC017DBCC9100374DBB /* MV004399770000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FB117DBCC7900374DBB /* MV004399770000.jpg */; };
+		B16F6FC117DBCC9100374DBB /* MV004795460000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FB217DBCC7900374DBB /* MV004795460000.jpg */; };
+		B16F6FC217DBCC9100374DBB /* MV004873280000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FB317DBCC7900374DBB /* MV004873280000.jpg */; };
+		B16F6FC317DBCC9100374DBB /* MV004703270000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FB417DBCC7900374DBB /* MV004703270000.jpg */; };
+		B16F6FC417DBCC9100374DBB /* MV004597090000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FB517DBCC7900374DBB /* MV004597090000.jpg */; };
+		B16F6FC517DBCC9100374DBB /* MV004729880000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FB617DBCC7900374DBB /* MV004729880000.jpg */; };
+		B16F6FC617DBCC9100374DBB /* MV004869900000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FB717DBCC7900374DBB /* MV004869900000.jpg */; };
+		B16F6FC717DBCC9100374DBB /* MV004998640000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FB817DBCC7900374DBB /* MV004998640000.jpg */; };
+		B16F6FC817DBCC9100374DBB /* MV004628240000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FB917DBCC7900374DBB /* MV004628240000.jpg */; };
+		B16F6FC917DBCC9100374DBB /* MV004061200000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FBA17DBCC7900374DBB /* MV004061200000.jpg */; };
+		B16F6FCA17DBCC9100374DBB /* MV004627980000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FBB17DBCC7900374DBB /* MV004627980000.jpg */; };
+		B16F6FCF17DBCFD600374DBB /* MV005069980000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FCB17DBCFC000374DBB /* MV005069980000.jpg */; };
+		B16F6FD017DBCFD600374DBB /* MV004581000000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FCC17DBCFC000374DBB /* MV004581000000.jpg */; };
+		B16F6FD117DBCFD600374DBB /* MV004973260000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FCD17DBCFC000374DBB /* MV004973260000.jpg */; };
+		B16F6FD217DBCFD600374DBB /* MV005014420000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B16F6FCE17DBCFC000374DBB /* MV005014420000.jpg */; };
+		B16F6FD417DBE80B00374DBB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16F6FD317DBE80B00374DBB /* QuartzCore.framework */; };
 		B1BBECDD17C47D290087DE68 /* TMSClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BBECDC17C47D290087DE68 /* TMSClient.m */; };
-		B1BBECE717C4FD150087DE68 /* MovieListingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BBECE617C4FD150087DE68 /* MovieListingTableViewController.m */; };
 		B1BBECF317C6606D0087DE68 /* NSDictionary+CPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BBECF217C660530087DE68 /* NSDictionary+CPAdditions.m */; };
 		B1BBECF417C665D20087DE68 /* RestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BBECEC17C65BE60087DE68 /* RestObject.m */; };
 		B1BBECFD17C680C70087DE68 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BBECFC17C680C70087DE68 /* Movie.m */; };
@@ -72,10 +101,41 @@
 		B16F6F8817CF7E4500374DBB /* MovieSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieSelectorViewController.h; sourceTree = "<group>"; };
 		B16F6F8917CF7E4500374DBB /* MovieSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSelectorViewController.m; sourceTree = "<group>"; };
 		B16F6F8A17CF7E4500374DBB /* MovieSelectorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieSelectorViewController.xib; sourceTree = "<group>"; };
+		B16F6F8E17D531BE00374DBB /* FriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTableViewCell.h; sourceTree = "<group>"; };
+		B16F6F8F17D531BE00374DBB /* FriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableViewCell.m; sourceTree = "<group>"; };
+		B16F6F9117D531E500374DBB /* FriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
+		B16F6F9817D8288600374DBB /* checkBoxMarked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkBoxMarked.png; sourceTree = "<group>"; };
+		B16F6F9917D8288600374DBB /* checkBoxMarked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkBoxMarked@2x.png"; sourceTree = "<group>"; };
+		B16F6F9A17D8288600374DBB /* checkBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkBox.png; sourceTree = "<group>"; };
+		B16F6F9B17D8288600374DBB /* checkBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkBox@2x.png"; sourceTree = "<group>"; };
+		B16F6FA117D8329100374DBB /* MovieShowtimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieShowtimeCell.h; sourceTree = "<group>"; };
+		B16F6FA217D8329100374DBB /* MovieShowtimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieShowtimeCell.m; sourceTree = "<group>"; };
+		B16F6FA617DB6DF200374DBB /* MovieShowtimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieShowtimeCell.xib; sourceTree = "<group>"; };
+		B16F6FA817DB7EE700374DBB /* MovieShowtimeImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieShowtimeImageCell.h; sourceTree = "<group>"; };
+		B16F6FA917DB7EE700374DBB /* MovieShowtimeImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieShowtimeImageCell.m; sourceTree = "<group>"; };
+		B16F6FAB17DB7F0200374DBB /* MovieShowtimeImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieShowtimeImageCell.xib; sourceTree = "<group>"; };
+		B16F6FAD17DBCC7900374DBB /* MV003726120000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV003726120000.jpg; sourceTree = "<group>"; };
+		B16F6FAE17DBCC7900374DBB /* MV004597220000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV004597220000.jpg; sourceTree = "<group>"; };
+		B16F6FAF17DBCC7900374DBB /* MV004730710000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV004730710000.jpg; sourceTree = "<group>"; };
+		B16F6FB017DBCC7900374DBB /* MV004966480000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV004966480000.jpg; sourceTree = "<group>"; };
+		B16F6FB117DBCC7900374DBB /* MV004399770000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV004399770000.jpg; sourceTree = "<group>"; };
+		B16F6FB217DBCC7900374DBB /* MV004795460000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV004795460000.jpg; sourceTree = "<group>"; };
+		B16F6FB317DBCC7900374DBB /* MV004873280000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV004873280000.jpg; sourceTree = "<group>"; };
+		B16F6FB417DBCC7900374DBB /* MV004703270000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV004703270000.jpg; sourceTree = "<group>"; };
+		B16F6FB517DBCC7900374DBB /* MV004597090000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV004597090000.jpg; sourceTree = "<group>"; };
+		B16F6FB617DBCC7900374DBB /* MV004729880000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV004729880000.jpg; sourceTree = "<group>"; };
+		B16F6FB717DBCC7900374DBB /* MV004869900000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV004869900000.jpg; sourceTree = "<group>"; };
+		B16F6FB817DBCC7900374DBB /* MV004998640000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV004998640000.jpg; sourceTree = "<group>"; };
+		B16F6FB917DBCC7900374DBB /* MV004628240000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV004628240000.jpg; sourceTree = "<group>"; };
+		B16F6FBA17DBCC7900374DBB /* MV004061200000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV004061200000.jpg; sourceTree = "<group>"; };
+		B16F6FBB17DBCC7900374DBB /* MV004627980000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV004627980000.jpg; sourceTree = "<group>"; };
+		B16F6FCB17DBCFC000374DBB /* MV005069980000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV005069980000.jpg; sourceTree = SOURCE_ROOT; };
+		B16F6FCC17DBCFC000374DBB /* MV004581000000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV004581000000.jpg; sourceTree = SOURCE_ROOT; };
+		B16F6FCD17DBCFC000374DBB /* MV004973260000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV004973260000.jpg; sourceTree = SOURCE_ROOT; };
+		B16F6FCE17DBCFC000374DBB /* MV005014420000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MV005014420000.jpg; sourceTree = SOURCE_ROOT; };
+		B16F6FD317DBE80B00374DBB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B1BBECDB17C47D290087DE68 /* TMSClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSClient.h; sourceTree = "<group>"; };
 		B1BBECDC17C47D290087DE68 /* TMSClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSClient.m; sourceTree = "<group>"; };
-		B1BBECE517C4FD150087DE68 /* MovieListingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieListingTableViewController.h; sourceTree = "<group>"; };
-		B1BBECE617C4FD150087DE68 /* MovieListingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieListingTableViewController.m; sourceTree = "<group>"; };
 		B1BBECEB17C65BE60087DE68 /* RestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestObject.h; sourceTree = "<group>"; };
 		B1BBECEC17C65BE60087DE68 /* RestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestObject.m; sourceTree = "<group>"; };
 		B1BBECF117C660530087DE68 /* NSDictionary+CPAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+CPAdditions.h"; path = "../NSDictionary+CPAdditions.h"; sourceTree = "<group>"; };
@@ -101,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16F6FD417DBE80B00374DBB /* QuartzCore.framework in Frameworks */,
 				B13A176F17C44F22009549C1 /* CoreGraphics.framework in Frameworks */,
 				B13A177117C44F22009549C1 /* UIKit.framework in Frameworks */,
 				B13A176D17C44F22009549C1 /* Foundation.framework in Frameworks */,
@@ -124,6 +185,29 @@
 		B13A176017C44F22009549C1 = {
 			isa = PBXGroup;
 			children = (
+				B16F6FAD17DBCC7900374DBB /* MV003726120000.jpg */,
+				B16F6FAE17DBCC7900374DBB /* MV004597220000.jpg */,
+				B16F6FAF17DBCC7900374DBB /* MV004730710000.jpg */,
+				B16F6FB017DBCC7900374DBB /* MV004966480000.jpg */,
+				B16F6FB117DBCC7900374DBB /* MV004399770000.jpg */,
+				B16F6FB217DBCC7900374DBB /* MV004795460000.jpg */,
+				B16F6FB317DBCC7900374DBB /* MV004873280000.jpg */,
+				B16F6FB417DBCC7900374DBB /* MV004703270000.jpg */,
+				B16F6FB517DBCC7900374DBB /* MV004597090000.jpg */,
+				B16F6FB617DBCC7900374DBB /* MV004729880000.jpg */,
+				B16F6FB717DBCC7900374DBB /* MV004869900000.jpg */,
+				B16F6FB817DBCC7900374DBB /* MV004998640000.jpg */,
+				B16F6FB917DBCC7900374DBB /* MV004628240000.jpg */,
+				B16F6FBA17DBCC7900374DBB /* MV004061200000.jpg */,
+				B16F6FCB17DBCFC000374DBB /* MV005069980000.jpg */,
+				B16F6FCC17DBCFC000374DBB /* MV004581000000.jpg */,
+				B16F6FCD17DBCFC000374DBB /* MV004973260000.jpg */,
+				B16F6FCE17DBCFC000374DBB /* MV005014420000.jpg */,
+				B16F6FBB17DBCC7900374DBB /* MV004627980000.jpg */,
+				B16F6F9817D8288600374DBB /* checkBoxMarked.png */,
+				B16F6F9917D8288600374DBB /* checkBoxMarked@2x.png */,
+				B16F6F9A17D8288600374DBB /* checkBox.png */,
+				B16F6F9B17D8288600374DBB /* checkBox@2x.png */,
 				B1BBED0817C949C00087DE68 /* Background.png */,
 				B13A177217C44F22009549C1 /* MoviePlanner */,
 				B13A178B17C44F22009549C1 /* MoviePlannerTests */,
@@ -145,6 +229,7 @@
 		B13A176B17C44F22009549C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B16F6FD317DBE80B00374DBB /* QuartzCore.framework */,
 				B13A176C17C44F22009549C1 /* Foundation.framework */,
 				B13A176E17C44F22009549C1 /* CoreGraphics.framework */,
 				B13A177017C44F22009549C1 /* UIKit.framework */,
@@ -157,9 +242,9 @@
 		B13A177217C44F22009549C1 /* MoviePlanner */ = {
 			isa = PBXGroup;
 			children = (
-				B1BBECFE17C6D1020087DE68 /* MovieCell.xib */,
-				B1BBECFF17C6D1520087DE68 /* MovieCell.h */,
-				B1BBED0017C6D1520087DE68 /* MovieCell.m */,
+				B16F6F8E17D531BE00374DBB /* FriendTableViewCell.h */,
+				B16F6F8F17D531BE00374DBB /* FriendTableViewCell.m */,
+				B16F6F9117D531E500374DBB /* FriendTableViewCell.xib */,
 				B13A177B17C44F22009549C1 /* movieplannerAppDelegate.h */,
 				B13A177C17C44F22009549C1 /* movieplannerAppDelegate.m */,
 				B13A177E17C44F22009549C1 /* Images.xcassets */,
@@ -168,25 +253,32 @@
 				B1BBECDC17C47D290087DE68 /* TMSClient.m */,
 				B1BBED0A17C95D6E0087DE68 /* SherpaClient.h */,
 				B1BBED0B17C95D6E0087DE68 /* SherpaClient.m */,
-				B1BBECF117C660530087DE68 /* NSDictionary+CPAdditions.h */,
-				B1BBECF217C660530087DE68 /* NSDictionary+CPAdditions.m */,
-				B1BBECE517C4FD150087DE68 /* MovieListingTableViewController.h */,
-				B1BBECE617C4FD150087DE68 /* MovieListingTableViewController.m */,
-				B1BBED0317C93E150087DE68 /* MyMoviesViewController.h */,
-				B1BBED0417C93E150087DE68 /* MyMoviesViewController.m */,
-				B1BBED0517C93E150087DE68 /* MyMoviesViewController.xib */,
-				B1BBECEB17C65BE60087DE68 /* RestObject.h */,
-				B1BBECEC17C65BE60087DE68 /* RestObject.m */,
 				B1BBECFB17C680C70087DE68 /* Movie.h */,
 				B1BBECFC17C680C70087DE68 /* Movie.m */,
 				B1BBED0D17C9C9D60087DE68 /* User.h */,
 				B1BBED0E17C9C9D60087DE68 /* User.m */,
+				B1BBECFE17C6D1020087DE68 /* MovieCell.xib */,
+				B1BBECFF17C6D1520087DE68 /* MovieCell.h */,
+				B1BBED0017C6D1520087DE68 /* MovieCell.m */,
+				B16F6FA117D8329100374DBB /* MovieShowtimeCell.h */,
+				B16F6FA217D8329100374DBB /* MovieShowtimeCell.m */,
+				B16F6FA617DB6DF200374DBB /* MovieShowtimeCell.xib */,
+				B16F6FA817DB7EE700374DBB /* MovieShowtimeImageCell.h */,
+				B16F6FA917DB7EE700374DBB /* MovieShowtimeImageCell.m */,
+				B16F6FAB17DB7F0200374DBB /* MovieShowtimeImageCell.xib */,
+				B1BBED0317C93E150087DE68 /* MyMoviesViewController.h */,
+				B1BBED0417C93E150087DE68 /* MyMoviesViewController.m */,
+				B1BBED0517C93E150087DE68 /* MyMoviesViewController.xib */,
 				B16F6F8317CF0D9900374DBB /* MoviesTonightViewController.h */,
 				B16F6F8417CF0D9900374DBB /* MoviesTonightViewController.m */,
+				B16F6F8517CF0D9900374DBB /* MoviesTonightViewController.xib */,
 				B16F6F8817CF7E4500374DBB /* MovieSelectorViewController.h */,
 				B16F6F8917CF7E4500374DBB /* MovieSelectorViewController.m */,
 				B16F6F8A17CF7E4500374DBB /* MovieSelectorViewController.xib */,
-				B16F6F8517CF0D9900374DBB /* MoviesTonightViewController.xib */,
+				B1BBECEB17C65BE60087DE68 /* RestObject.h */,
+				B1BBECEC17C65BE60087DE68 /* RestObject.m */,
+				B1BBECF117C660530087DE68 /* NSDictionary+CPAdditions.h */,
+				B1BBECF217C660530087DE68 /* NSDictionary+CPAdditions.m */,
 			);
 			path = MoviePlanner;
 			sourceTree = "<group>";
@@ -298,8 +390,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16F6FCF17DBCFD600374DBB /* MV005069980000.jpg in Resources */,
+				B16F6FD017DBCFD600374DBB /* MV004581000000.jpg in Resources */,
+				B16F6FD117DBCFD600374DBB /* MV004973260000.jpg in Resources */,
+				B16F6FD217DBCFD600374DBB /* MV005014420000.jpg in Resources */,
+				B16F6FBC17DBCC9100374DBB /* MV003726120000.jpg in Resources */,
+				B16F6FBD17DBCC9100374DBB /* MV004597220000.jpg in Resources */,
+				B16F6FBE17DBCC9100374DBB /* MV004730710000.jpg in Resources */,
+				B16F6FBF17DBCC9100374DBB /* MV004966480000.jpg in Resources */,
+				B16F6FC017DBCC9100374DBB /* MV004399770000.jpg in Resources */,
+				B16F6FC117DBCC9100374DBB /* MV004795460000.jpg in Resources */,
+				B16F6FC217DBCC9100374DBB /* MV004873280000.jpg in Resources */,
+				B16F6FC317DBCC9100374DBB /* MV004703270000.jpg in Resources */,
+				B16F6FC417DBCC9100374DBB /* MV004597090000.jpg in Resources */,
+				B16F6FC517DBCC9100374DBB /* MV004729880000.jpg in Resources */,
+				B16F6FC617DBCC9100374DBB /* MV004869900000.jpg in Resources */,
+				B16F6FC717DBCC9100374DBB /* MV004998640000.jpg in Resources */,
+				B16F6FC817DBCC9100374DBB /* MV004628240000.jpg in Resources */,
+				B16F6FC917DBCC9100374DBB /* MV004061200000.jpg in Resources */,
+				B16F6FCA17DBCC9100374DBB /* MV004627980000.jpg in Resources */,
+				B16F6FAC17DB80C600374DBB /* MovieShowtimeImageCell.xib in Resources */,
+				B16F6FA717DB72D500374DBB /* MovieShowtimeCell.xib in Resources */,
+				B16F6F9C17D828AA00374DBB /* checkBoxMarked.png in Resources */,
+				B16F6F9D17D828AA00374DBB /* checkBoxMarked@2x.png in Resources */,
+				B16F6F9E17D828AA00374DBB /* checkBox.png in Resources */,
+				B16F6F9F17D828AA00374DBB /* checkBox@2x.png in Resources */,
 				B1BBED0217C6D4530087DE68 /* MovieCell.xib in Resources */,
 				B16F6F8C17CF7E4500374DBB /* MovieSelectorViewController.xib in Resources */,
+				B16F6F9217D539C600374DBB /* FriendTableViewCell.xib in Resources */,
 				B13A177717C44F22009549C1 /* InfoPlist.strings in Resources */,
 				B1BBED0917C949C80087DE68 /* Background.png in Resources */,
 				B13A177F17C44F22009549C1 /* Images.xcassets in Resources */,
@@ -362,13 +480,15 @@
 				B16F6F8617CF0D9900374DBB /* MoviesTonightViewController.m in Sources */,
 				B1BBED0C17C95D6E0087DE68 /* SherpaClient.m in Sources */,
 				B1BBECDD17C47D290087DE68 /* TMSClient.m in Sources */,
+				B16F6FAA17DB7EE700374DBB /* MovieShowtimeImageCell.m in Sources */,
 				B13A177D17C44F22009549C1 /* movieplannerAppDelegate.m in Sources */,
 				B16F6F8B17CF7E4500374DBB /* MovieSelectorViewController.m in Sources */,
 				B1BBED0F17C9C9D60087DE68 /* User.m in Sources */,
 				B1BBED0617C93E150087DE68 /* MyMoviesViewController.m in Sources */,
 				B13A177917C44F22009549C1 /* main.m in Sources */,
 				B1BBED0117C6D1520087DE68 /* MovieCell.m in Sources */,
-				B1BBECE717C4FD150087DE68 /* MovieListingTableViewController.m in Sources */,
+				B16F6FA317D8329100374DBB /* MovieShowtimeCell.m in Sources */,
+				B16F6F9017D531BE00374DBB /* FriendTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

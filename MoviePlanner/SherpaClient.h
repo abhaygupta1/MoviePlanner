@@ -12,10 +12,9 @@
 
 + (SherpaClient *)instance;
 
-// Statuses API
+// Sherpa API
 
-- (void)userListWithCount:(int)count uriPath: (NSString *)uriPath success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
-
+- (void)userListWithUriPath:(NSString *)uriPath success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 - (void)userWithName:(NSString *)name success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 - (void)saveUserWithName:(NSString *)name params:(NSDictionary *)params success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 

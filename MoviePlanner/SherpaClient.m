@@ -34,17 +34,15 @@
     return self;
 }
 
-// Statuses API
+// Sherpa API
 
-- (void)userListWithCount:(int)count uriPath: (NSString *)uriPath success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+- (void)userListWithUriPath:(NSString *)uriPath success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     // do nothing
     NSLog(@"Im here");
     NSMutableDictionary *params = nil;
-    //[NSMutableDictionary dictionaryWithDictionary:@{@"start_key": @"a"}];
-    //[params setObject:@"asc" forKey:@"order"];
-    //[params setObject:@(count) forKey:@"record_limit"];
-    
-    [self getPath:uriPath parameters:params success:success failure:failure];
+    [self getPath:uriPath parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        success(operation, responseObject);
+    } failure:failure];
     
 }
 
@@ -59,7 +57,7 @@
 - (void)saveUserWithName:(NSString *)name params:(NSDictionary *)params success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     NSLog(@"Im here");
     
-    NSMutableString *uriPath = [NSMutableString stringWithFormat:@"YDHTWebService/V1/set/MovieDB.MovieInterest/%@", name ];
+    NSMutableString *uriPath = [NSMutableString stringWithFormat:@"YDHTWebService/V1/set/MovieDB.MovieInterest2/%@", name ];
     self.parameterEncoding = AFJSONParameterEncoding;
     [self postPath:uriPath parameters:params success:success failure:failure];
     

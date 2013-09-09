@@ -38,6 +38,9 @@
                     <state key="normal" title="Purge Interest List">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="operationPressed:" destination="-1" eventType="touchDown" id="7vl-BN-9gt"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

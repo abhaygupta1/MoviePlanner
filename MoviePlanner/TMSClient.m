@@ -11,10 +11,11 @@
 
 
 #define TMS_BASE_URL [NSURL URLWithString:@"http://data.tmsapi.com/"]
-#define TMS_CONSUMER_KEY @"kw2835r382zwka2r6fnjhun2"
-#define TWITTER_CONSUMER_SECRET @"2cygl2irBgMQVNuWJwMn6vXiyDnWtht7gSyuRnf0Fg"
+//#define TMS_CONSUMER_KEY @"kw2835r382zwka2r6fnjhun2"
+//#define TMS_CONSUMER_KEY @"cxtgyen3r6k8dd44rmhcgyqa"
+#define TMS_CONSUMER_KEY @"tpnb5uykmaqdbhc5pjzjb5mp"
+//#define TWITTER_CONSUMER_SECRET @"2cygl2irBgMQVNuWJwMn6vXiyDnWtht7gSyuRnf0Fg"
 
-static NSString * const kAccessTokenKey = @"kAccessTokenKey";
 
 @implementation TMSClient
 
@@ -39,16 +40,20 @@ static NSString * const kAccessTokenKey = @"kAccessTokenKey";
 
 
 
-// Statuses API
+// TMS API to get the movies
 
 - (void)movieListWithZipCode:(NSString *)zipCode success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
-    // do nothing
-    NSLog(@"Im here");
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{@"api_key": TMS_CONSUMER_KEY}];
     [params setObject:zipCode forKey:@"zip"];
     [params setObject:@"3" forKey:@"radius"];
     [params setObject:@"mi" forKey:@"units"];
-    [params setObject:@"2013-08-30" forKey:@"startDate"];
+    
+    NSLocale *locale = [NSLocale currentLocale];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setLocale:locale];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    //NSLog(@"The date is %@", [dateFormatter stringFromDate:[NSDate date]]);
+    [params setObject:[dateFormatter stringFromDate:[NSDate date]] forKey:@"startDate"];
 
     [self getPath:@"v1/movies/showings" parameters:params success:success failure:failure];
     

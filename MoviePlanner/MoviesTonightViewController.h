@@ -12,6 +12,7 @@
 UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) UIRefreshControl *refreshControl;
 
 
 @end

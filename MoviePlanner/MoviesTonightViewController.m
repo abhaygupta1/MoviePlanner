@@ -11,10 +11,12 @@
 #import "MovieCell.h"
 #import "TMSClient.h"
 #import "Movie.h"
+#import "User.h"
 
 @interface MoviesTonightViewController ()
 @property (nonatomic, strong) NSMutableArray *movies;
 @end
+
 
 @implementation MoviesTonightViewController
 
@@ -23,7 +25,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
+        self.movies = nil;
     }
     return self;
 }
@@ -40,13 +42,19 @@
     self.navigationItem.leftBarButtonItem =[[UIBarButtonItem alloc]
                                             initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self
                                             action:@selector(onCancelButton)];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    if (self.movies == nil) {
+        [self reload];
+    }
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self reload];
-
+    UITableViewController *tableViewController = [[UITableViewController alloc] init];
+    tableViewController.tableView = self.tableView;
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]
+                                        init];
+    refreshControl.tintColor = [UIColor magentaColor];
+    [refreshControl addTarget:self action:@selector(updateUsers) forControlEvents:UIControlEventValueChanged];
+    
+    tableViewController.refreshControl = refreshControl;
+    self.refreshControl = refreshControl;
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,6 +69,12 @@
 
 #pragma mark - Table view data source
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
@@ -69,7 +83,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return self.movies.count;
 }
@@ -80,9 +93,14 @@
     MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.title.text = ((Movie *)(self.movies[indexPath.row])).title;
-    [cell.imageView setImageWithURL:[NSURL URLWithString:((Movie *)(self.movies[indexPath.row])).image]];
-    
+    Movie *movie = (Movie *)(self.movies[indexPath.row]);
+    cell.title.text = movie.title;
+    UIImage *movieImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", movie.movieId]];
+    if (movieImage != nil) {
+        cell.imageView.image = movieImage;
+    }
+    cell.confirmed.text = [@([User confirmCountForMovie:[movie title]]) stringValue];
+    cell.interested.text = [@([User interestCountForMovie:[movie title]]) stringValue];
     return cell;
 }
 
@@ -94,65 +112,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     MovieSelectorViewController *movieSelectorVC = [[MovieSelectorViewController alloc] init];
-    
-    [self.navigationController pushViewController:movieSelectorVC animated:NO];
+    Movie *movie = (Movie *)self.movies[indexPath.row];
+    movieSelectorVC.movie = movie;
+    [self.navigationController pushViewController:movieSelectorVC animated:YES];
 }
 
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
 
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-/*
- #pragma mark - Navigation
- 
- // In a story board-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- 
- */
 
 - (void)reload {
-    
      [[TMSClient instance] movieListWithZipCode:@"95054" success:^(AFHTTPRequestOperation *operation, id response) {
-     id payload = [NSJSONSerialization JSONObjectWithData:response options:NSJSONWritingPrettyPrinted error:nil];
+     id payload = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableContainers error:nil];
      NSLog(@"The response is %@", payload);
      self.movies = [Movie moviesWithArray:payload];
      [self.tableView reloadData];
@@ -163,5 +132,11 @@
     
 }
 
+- (void)updateUsers
+{
+    [User reloadfromTableView:self.tableView];
+    NSLog(@"Reload called");
+    [self.refreshControl endRefreshing];
+}
 
 @end

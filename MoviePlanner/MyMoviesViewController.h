@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyMoviesViewController : UIViewController <
- UITableViewDataSource, UITableViewDelegate>
+@interface MyMoviesViewController : UIViewController
+ < UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) UIRefreshControl *refreshControl;
+- (IBAction)operationPressed:(UIButton *)sender;
 
 @end

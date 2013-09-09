@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4488.2" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" id="3Zf-Eb-WpD" customClass="FriendTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="3Zf-Eb-WpD" id="Dzf-b7-7rj">
+                <rect key="frame" x="0.0" y="0.0" width="250" height="39"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wf8-nD-iqH">
+                        <rect key="frame" x="10" y="12" width="200" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="checkBoxMarked.png" translatesAutoresizingMaskIntoConstraints="NO" id="hX5-eT-lHQ">
+                        <rect key="frame" x="214" y="13" width="20" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="wf8-nD-iqH" secondAttribute="bottom" constant="11.5" id="PiA-ef-2VJ"/>
+                    <constraint firstItem="wf8-nD-iqH" firstAttribute="top" secondItem="Dzf-b7-7rj" secondAttribute="top" id="Rd6-Rd-C0q"/>
+                    <constraint firstItem="wf8-nD-iqH" firstAttribute="leading" secondItem="Dzf-b7-7rj" secondAttribute="leading" constant="10" id="VhP-t8-abc"/>
+                    <constraint firstAttribute="trailing" secondItem="hX5-eT-lHQ" secondAttribute="trailing" constant="6" id="jM8-Sg-dwV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageView" destination="hX5-eT-lHQ" id="Ito-AI-CD6"/>
+                <outlet property="name" destination="wf8-nD-iqH" id="vxQ-37-lSs"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkBoxMarked.png" width="20" height="20"/>
+    </resources>
+</document>
